@@ -17,12 +17,23 @@ public class HybridBase {
 
 	
 
-	public static AndroidDriver<AndroidElement> Capabilities()throws MalformedURLException{
+	public static AndroidDriver<AndroidElement> Capabilities(String Device)throws MalformedURLException{
 		// TODO Auto-generated method stub
 			File f = new File("src/test/resources");
 			File fs = new File(f, "ApiDemos-debug.apk");
 
 			DesiredCapabilities cap = new DesiredCapabilities();
+			if (Device.equals("emulator"))
+			{
+				cap.setCapability(MobileCapabilityType.DEVICE_NAME, "NikhilEmulator");
+
+			}else if (Device.equals("real"))
+			{
+				cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Android device");
+
+				
+			}
+			
 			cap.setCapability(MobileCapabilityType.DEVICE_NAME, "NikhilEmulator");
 			cap.setCapability(MobileCapabilityType.APP, fs.getAbsolutePath());
 			

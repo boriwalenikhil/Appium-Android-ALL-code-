@@ -8,12 +8,12 @@ import org.openqa.selenium.By;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 
-public class basics extends AndriodTest {
+public class basics extends HybridBase {
 
 	public static void main(String[] args) throws MalformedURLException {
 		// TODO Auto-generated method stub
 
-		AndroidDriver<AndroidElement> driver = Capabilities();
+		AndroidDriver<AndroidElement> driver = Capabilities("emulator"); // agr muze device pay run krna hey to may  "real" likhunga nahi to emulator lihkunga
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
