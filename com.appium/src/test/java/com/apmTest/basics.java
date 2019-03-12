@@ -13,7 +13,7 @@ public class basics extends HybridBase {
 	public static void main(String[] args) throws MalformedURLException {
 		// TODO Auto-generated method stub
 
-		AndroidDriver<AndroidElement> driver = Capabilities("emulator"); // agr muze device pay run krna hey to may  "real" likhunga nahi to emulator lihkunga
+		AndroidDriver<AndroidElement> driver = Capabilities("real"); // agr muze device pay run krna hey to may  "real" likhunga nahi to emulator lihkunga
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 

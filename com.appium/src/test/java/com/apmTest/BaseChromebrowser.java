@@ -11,7 +11,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.MobileCapabilityType;
 
-public class AndriodTest {
+public class BaseChromebrowser {
 	
 	
 
@@ -19,13 +19,13 @@ public class AndriodTest {
 
 	public static AndroidDriver<AndroidElement> Capabilities()throws MalformedURLException{
 		// TODO Auto-generated method stub
-		File f = new File("src/test/resources");
-		File fs = new File(f, "ApiDemos-debug.apk");
+			
 
 			DesiredCapabilities cap = new DesiredCapabilities();
 			cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Android device");
-			cap.setCapability(MobileCapabilityType.APP, fs.getAbsolutePath());
 
+			cap.setCapability(MobileCapabilityType.BROWSER_NAME, "Chrome");
+			
 
 			//  set up connection with Server Appium
 			
